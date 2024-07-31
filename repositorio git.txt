@@ -1,0 +1,251 @@
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git initi
+git: 'initi' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio
+$ git init
+Initialized empty Git repository in C:/Users/Aluno Manhã/Documents/Ítalo/31-07/teste_repositorio/.git/
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global --lits
+error: unknown option `lits'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=
+user.email=
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global --unset user.name
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global --unset user.email
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global  user.name "italobovier"
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global user.email "italopablo01@gmail.com"
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=italobovier
+user.email=italopablo01@gmail.com
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git add .
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git commit -m "Versão 1.0"
+[master (root-commit) 99d2201] Versão 1.0
+ 1 file changed, 1 insertion(+)
+ create mode 100644 main.py
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (master)
+$ git branch -M main
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git remote add origin https://github.com/italobovier/teste_repositorio.git
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git push -u origin main
+remote: Repository not found.
+fatal: repository 'https://github.com/italobovier/teste_repositorio.git/' not found
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=italobovier
+user.email=italopablo01@gmail.com
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git remote add origin https://github.com/italobovier/teste_repositorio.git
+error: remote origin already exists.
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git push -u origin main
+remote: Repository not found.
+fatal: repository 'https://github.com/italobovier/teste_repositorio.git/' not found
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git remote -v
+origin  https://github.com/italobovier/teste_repositorio.git (fetch)
+origin  https://github.com/italobovier/teste_repositorio.git (push)
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git remote set-url origin https://github.com/italobovier/teste_repositorio.git
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git push -u origin main
+remote: Repository not found.
+fatal: repository 'https://github.com/italobovier/teste_repositorio.git/' not found
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git push -u origin main
+remote: Permission to italobovier/teste_repositorio.git denied to Sara743.
+fatal: unable to access 'https://github.com/italobovier/teste_repositorio.git/': The requested URL returned error: 403
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 259 bytes | 259.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/italobovier/teste_repositorio.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git add .
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git add .
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git commit -m "Version 1.1"
+[main afb81fd] Version 1.1
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+ rewrite main.py (100%)
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git oush -u origin main
+git: 'oush' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 406 bytes | 406.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/italobovier/teste_repositorio.git
+   99d2201..afb81fd  main -> main
+branch 'main' set up to track 'origin/main'.
+
+Aluno Manhã@LAB04_10 MINGW64 ~/Documents/Ítalo/31-07/teste_repositorio (main)
+$
